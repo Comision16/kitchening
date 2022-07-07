@@ -5,6 +5,8 @@ body.home {
 /* HEADER */
 .home__header {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .home__header__logo img {
@@ -19,10 +21,16 @@ body.home {
   font-size: 32px;
   height: 50px;
   width: 50px;
+  align-self: center;
 }
 
 .home__header__menu {
   margin: 20px 0 0 0;
+}
+
+.home__header__menu ul {
+  display: flex;
+  flex-direction: column;
 }
 
 .home__header__menu ul li {
@@ -45,11 +53,14 @@ body.home {
 
 .home__main__section--products {
   margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .home__main__section__article {
   width: 90%;
-  margin: 0 auto 30px;
+  margin-bottom: 30px;
 }
 
 .home__main__section__article__container {
@@ -96,9 +107,10 @@ body.home {
 }
 
 /* FOOTER */
-.home__footer__menu {
+.home__footer__menu ul{
   background-color: var(--colorRojo);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .home__footer__menu ul li {
@@ -125,9 +137,14 @@ body.home {
   display: none;
   }
 
+  .home__header__menu ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .home__header__menu ul li {
     display: inline-block;
-    width: 123px;
+    width: 15.5%;
   }
 
   /* MAIN */
@@ -136,17 +153,11 @@ body.home {
   }
 
   .home__main__section--products {
-    overflow: hidden;
+    justify-content: space-between;
   }
 
   .home__main__section__article {
-    float:left;
-    margin-right: 8px;
-    width: 380px;
-  }
-
-  .home__main__section__article:nth-child(even) {
-    margin-right: 0;
+    width: 49%;
   }
 }
 
@@ -165,30 +176,26 @@ body.home {
     margin-right: 0;
   }
 
+  /* MAIN */
   .home__main__section__article {
-
-    margin-right: 20px;
+    width: 32%;
   }
 
-  .home__main__section__article:nth-child(even) {
-    margin-right:  20px;
-  }
-
-  .home__main__section__article:nth-child(3n) {
-    margin-right:  0;
-  }
 
   /* FOOTER */
 
-  .home__footer__menu {
+  .home__footer__menu ul {
     padding: 60px 0;
     border-radius: 35px 35px 0 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
   }
 
   .home__footer__menu ul li {
     border-bottom: none;
     border-right: 1px solid #fff;
-    display: inline-block;
     padding: 3px 10px;
     text-align: center;
   }
